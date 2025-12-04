@@ -33,7 +33,7 @@ p
 
 .project-gradient
 {
-    height: 100vw;
+    height: 60vw;
     background-image: linear-gradient(to bottom right, #18453B,#8BA29D 20%,#ffffff );
 }
 
