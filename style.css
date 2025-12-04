@@ -1,0 +1,21 @@
+/* -------------------------------------------------- */
+/* SET THE BACKGROUND GRADIENTS FOR EACH TYPE OF PAGE */
+/* -------------------------------------------------- */
+.homepage-gradient
+{
+    height: 100vw;
+    background-image: linear-gradient(to bottom right, #ffffff,#8BA29D 70%,#18453B );
+}
+
+.project-gradient
+{
+    height: 100vw;
+    background-image: linear-gradient(to bottom right, #18453B,#8BA29D 20%,#ffffff );
+}
+
+.sub-projects-gradient
+{
+    height: 100vw;
+    background-image: linear-gradient(to bottom right, #18453B,#8BA29D,#18453B );
+}
+
