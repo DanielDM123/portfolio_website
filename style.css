@@ -3,12 +3,31 @@ body
     margin: 0;
 }
 
+h1
+{
+    font-size: 50px;
+}
+
+.title
+{
+    text-align: center;
+    margin: 50px;
+
+}
+
+p
+{
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+
 /* -------------------------------------------------- */
 /* SET THE BACKGROUND GRADIENTS FOR EACH TYPE OF PAGE */
 /* -------------------------------------------------- */
 .homepage-gradient
 {
-    height: 100vw;
+    height: 60vw;
     background-image: linear-gradient(to bottom right, #ffffff,#8BA29D 70%,#18453B );
 }
 
@@ -25,7 +44,9 @@ body
 }
 
 
+/* ----------------- */
 /* NAV BAR COMPONETS */
+/* ----------------- */
 nav
 {
     position: sticky;
@@ -96,9 +117,42 @@ nav
 }
 
 
+/* ----------- */
 /* TEXT COLORS */
+/* ----------- */
 .white
 {
 
     color:#ffffff;
 }
+
+.dark
+{
+    color: #2F2D2E;
+}
+
+
+/* ------ */
+/* IMAGES */
+/* ------ */
+img
+{
+    border-radius: 30%;
+    margin: 50px;
+
+}
+
+.clear-float
+{
+    clear: both;
+}
+
+/* Remember to change the width and aspect ratio when you get a real photo */
+.mugshot
+{
+    aspect-ratio: 529 / 498;
+    width: 30em;
+
+    float: left;
+}
+
