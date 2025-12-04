@@ -1,3 +1,8 @@
+body
+{
+    margin: 0;
+}
+
 /* -------------------------------------------------- */
 /* SET THE BACKGROUND GRADIENTS FOR EACH TYPE OF PAGE */
 /* -------------------------------------------------- */
@@ -19,3 +24,81 @@
     background-image: linear-gradient(to bottom right, #18453B,#8BA29D,#18453B );
 }
 
+
+/* NAV BAR COMPONETS */
+nav
+{
+    position: sticky;
+    top: 0;
+}
+
+.nav-container
+{
+    padding: 10px;
+    margin: 1px;
+
+    height: 3vw;
+}
+
+.logo-circle
+{
+    background-color: #7C8483;
+    
+    width: 20px;
+    height: 20px;
+
+    padding: 10px;
+    
+    border-radius: 100%;
+}
+
+.logo_icon
+{
+    background-color: #ffffff;
+}
+
+.nav-background
+{
+    margin: 0;
+    padding: 1%;
+
+    display: flex;
+
+    background-color: #000000;
+    opacity: 70%;
+}
+
+.nav-text
+{
+    flex-grow: 4;
+
+}
+
+.nav-projects
+{
+    background-color: #808080;
+    color: #D1DAD8;
+
+    text-align: center;
+
+    height: 30px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-radius: 16px;
+}
+
+.nav-projects h3
+{
+    margin: 3px;
+    padding: 3px;
+}
+
+
+/* TEXT COLORS */
+.white
+{
+
+    color:#ffffff;
+}
