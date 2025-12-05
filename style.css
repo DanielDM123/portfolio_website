@@ -38,6 +38,9 @@ video
     margin-top: 0;
     margin-bottom: 10vw;
 
+    width: 60vw;
+    height: auto;
+
 }
 
 a, a:visited 
