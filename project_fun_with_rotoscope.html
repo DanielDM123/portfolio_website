@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <title>Fun With Rotocoping Project</title>
+    <title>Fun With Rotoscoping Project</title>
 </head>
-<body class="sub-project-gradient">
+<body class="sub-projects-gradient">
     
 <!-- NAV BAR-->
 <nav>
@@ -37,7 +37,58 @@
     </div>
 </nav>
 
+<h2 class="white title"><b>This project involved implementing three core computer graphic and animation techniques (rotoscoping, image wrapping, and keying) to create a video that was at least 30 seconds long.</b></h2>
 
+<!-- ROTOSCOPING EXPLANATION -->
+<img src="/images/RotoExample.png" alt="Example of Rotoscoping" class="float-right">
+
+<h1 class="white title">Rotoscoping</h1>
+
+<p class="white">Created animation by tracing live-action footage of myself frame-by-frame.</p>
+
+<p class="white">Creating a program that stored points on the screen into an XML file.</p>
+
+<p class="white">Once the program read the incoming frame, it draw out and connect the points read from the XML file.</p>
+
+<p class="white">If the program notice there was only one point on the current frame, it would instead draw a PNG of a bird where the point was at.</p>
+
+
+<!-- IMAGE WARPING EXPLANATION -->
+ <p class="clear-float "></p>
+
+<img src="/images/bird.gif" alt="Image Warping Example GIF" class="float-left">
+
+<h1 class="white title">Image Warping</h1>
+
+<p class="white ">Manipulated the PNG of the bird by translating the pixels of the head left and right.</p>
+
+<p class="white">Achieved this by determining what y-level separated the neck and body of the bird.  </p>
+
+<p class="white">Then, when drawing the bird image, every pixel above the threshold would move either left or right in a linear fashion by utilizing linear interpolation.  </p>
+
+<!-- CHROMAKEYING EXPLANATION -->
+<p class="clear-float "></p>
+
+<img src="/images/greenscreenExample.png" alt="Green Screen Exmaple" class="float-right">
+
+<h1 class="white title">Chromakeying</h1>
+
+
+<p class="white">Implemented my own green screen background replacement functionality.</p>
+
+<p class="white">The program would generates an alpha matte for each frame by applying Vlahos equations, a method used to differentiate the green screen background from the foreground.</p>
+
+<p class="white">Afterwards, the program would compare it against a predefined garbage mask to precisely isolate the intended foreground  from extraneous background elements.</p>
+
+<p class="clear-float "></p>
+
+
+<p class="white title">If for some reason you want to watch the video, here you go. Be warned, it is a little cringey. </p>
+
+<video width="600vw" heigth="auto" controls>
+    <source src="/images/Final_Video.mp4" type="video/mp4">
+    Your browser does not support the video tag. Honestly, it's probably for the best you don't see this.
+</video>
 
 </body>
 </html>

@@ -15,31 +15,44 @@ h1
 
 }
 
+
 p
 {
-    font-size: 30px;
+    font-size: 25px;
     margin-left: 50px;
 }
 
+.small-textbox
+{
+    width: 350px;
+}
+
+video
+{
+    display: block;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 10vw;
+
+}
 
 /* -------------------------------------------------- */
 /* SET THE BACKGROUND GRADIENTS FOR EACH TYPE OF PAGE */
 /* -------------------------------------------------- */
 .homepage-gradient
 {
-    height: 60vw;
-    background-image: linear-gradient(to bottom right, #ffffff,#8BA29D 70%,#18453B );
+
+    background-image: linear-gradient(to bottom right, #ffffff,#8BA29D 90%,#18453B );
 }
 
 .project-gradient
 {
-    height: 60vw;
+
     background-image: linear-gradient(to bottom right, #18453B,#8BA29D 20%,#ffffff );
 }
 
 .sub-projects-gradient
 {
-    height: 100vw;
     background-image: linear-gradient(to bottom right, #18453B,#8BA29D,#18453B );
 }
 
@@ -137,9 +150,22 @@ nav
 /* ------ */
 img
 {
-    border-radius: 30%;
+    border-radius: 20px;
     margin: 50px;
+    margin-top: 0;
 
+    width: 30em;
+    height: auto;
+}
+
+.float-right
+{
+    float: right;
+}
+
+.float-left
+{
+    float: left;
 }
 
 .clear-float
@@ -147,14 +173,22 @@ img
     clear: both;
 }
 
+
+
 /* Remember to change the width and aspect ratio when you get a real photo */
 .mugshot
 {
-    aspect-ratio: 529 / 498;
+    margin: 50px;
+
     width: 30em;
+    height: auto;
 
     float: left;
 }
+
+/* -------------- */
+/* PROJECT IMAGES */
+/* -------------- */
 
 .project-icons
 {
@@ -166,10 +200,6 @@ img
     height: auto;
 }
 
-
-/* -------------- */
-/* PROJECT IMAGES */
-/* -------------- */
 .project-container
 {
     display: flex;
