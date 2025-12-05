@@ -243,13 +243,6 @@ img
 /* MOBILE SCREEN */
 /* ------------- */
 @media screen and (max-width: 616px) {
-    .homepage-gradient, .project-gradient, .sub-projects-gradient
-    {
-            background-image: linear-gradient(to bottom right, blue,#8BA29D 20%,yellow );
-
-    }
-
-
     /* Update NAV BAR size */
     .nav-container
     {
