@@ -57,7 +57,7 @@ video
 
 .sub-projects-gradient
 {
-    background-image: linear-gradient(to bottom right, #18453B,#8BA29D,#18453B );
+    background-image: linear-gradient(to bottom right, #2F584F,#020706,#2F584F );
 }
 
 
@@ -72,14 +72,19 @@ nav
 
 .nav-container
 {
+
     padding: 10px;
     margin: 1px;
 
-    height: 3vw;
+    height: 45px;
 }
 
 .logo-circle
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     background-color: #7C8483;
     
     width: 20px;
@@ -108,19 +113,24 @@ nav
 
 .nav-text
 {
-    flex-grow: 4;
+    display: flex;
 
+    flex-grow: 4;
 }
 
 .nav-projects
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: #808080;
     color: #D1DAD8;
 
     text-align: center;
 
-    height: 30px;
-
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -229,3 +239,61 @@ img
     max-width: 450px;
 }
 
+/* ------------- */
+/* MOBILE SCREEN */
+/* ------------- */
+@media screen and (max-width: 616px) {
+    .homepage-gradient, .project-gradient, .sub-projects-gradient
+    {
+            background-image: linear-gradient(to bottom right, blue,#8BA29D 20%,yellow );
+
+    }
+
+
+    /* Update NAV BAR size */
+    .nav-container
+    {
+        height: 10vw;
+    }
+
+    .logo-circle
+    {
+        width: 5vw;
+        height: 5vw;
+
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .nav-projects
+    {
+        height: 8vw;
+    }
+
+    
+    /* Update the project icon size */
+    .project-item
+    {
+        width: 80%;
+        max-width: none;
+    }
+
+    .small-textbox
+    {
+        width: 35vw;
+    }
+
+    #hint-text
+    {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    /* Update the video size in Fun with Roto project */
+    video 
+    {
+        width: 75vw;
+        height: auto;
+    }
+
+}
