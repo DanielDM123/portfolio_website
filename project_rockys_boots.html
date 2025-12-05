@@ -37,6 +37,91 @@
     </div>
 </nav>
 
+<!-- ----- -->
+<!-- INTRO -->
+<!-- ------ -->
+<h2 class="white title"><b>This team project involved the successful recreation of the educational video game, Rock's Boots, focusing on the implementation of core technical, object oriented programming (OOP), and leadership skills.</b></h2>
+
+<img src="/images/rocky1.jpeg" alt="Screenshot of the Game" class="float-right">
+
+<p class="white">The goal of the original game is to teach kids how logic gates worked (like AND, OR, NOT, and XOR gates). The objective is to use a boot to kick certain objects off the conveyor belt line by using logic gates to control the boot.</p>
+
+<!-- --------------------------------- -->
+<!-- COLLABORATIVE ENGINEERING SECTION -->
+ <!-- -------------------------------- -->
+ <h1 class="white title clear-float">Collaborative Engineering</h1>
+
+<p class="white">Gained practical, hands-on experience in the software development lifecycle, including unit testing, refining, scheduling using Trello, and deploying code to Gitlab.</p>
+
+<p class="white">Collaborated with teammates to debug the sensor system, by breaking the system down into its basic parts and seeing if our code aligns with the logic.</p>
+
+<!-- -------------------------- -->
+<!-- PROJECT LEADERSHIP SECTION -->
+<!-- -------------------------- -->
+<h1 class="white title">Project Leadership</h1>
+
+<p class="white">Demonstrated strong leadership skills by successfully guiding the team through the implementation of the sensor-based object detection system. </p>
+
+<p class="white">Strategically delegated responsibilities to the best suited team member, managed task timeline, and ensured the project remained on schedule to meet all deadlines. </p>
+
+<!-- ---------------------------- -->
+<!-- SOFTWARE DEVELOPMENT SECTION -->
+ <!-- ---------------------------- -->
+<h1 class="white title">Software Development</h1>
+
+<p class="white">Here are some the of the components of the game I worked on, and how I went about creating them.</p>
+
+<!-- Logic Gates -->
+<h2 class="white subtitle"><b>1. Logic Gates</b></h2>
+
+<p class="white">I helped to create and implement the logic for the logic gates for the game. </p>
+
+<img src="/images/logicGates.jpeg" alt="List of logic gates" class="img-center">
+
+<img src="/images/ANDGate.png" alt="AND gate image" class="float-left AND-gate">
+
+<p class="white">Our actual pins look something like this AND gate, where there were 2 pins on the right of the gates that would act as the input, and one pin that would act as the output.</p>
+
+<p class="white clear-float">On each frame, the program would check that status of each of the input pins. It would then compute the logic of the gate depending on the state of the input pins. So, in this case with the AND gate shown above, if the top pin status was TRUE, and the bottom pin status was FLASE, then the output pin would be set to FLASE. </p>
+
+<p class="white">Later on in in development, we realized that we could just compute the logic of the gate every time the statues of one of the input pins changed, instead of checking every single frame. We decided to not go with this more efficient method, since code efficiency was not one of the main grading criteria of the project. Our program was small enough where lag was not noticeable, so it worked out in the end.</p>
+
+<p class="white">For the class organization, I created a parent Gate class, from which all of the gate classes were derived from. Many of the gates shared common tasks, like all having input and output pins, and a ProcessLogic() function, so having a parent class helped to reduce repeating code. </p>
+
+
+<!-- PINS AND PIN CONNECTIONS-->
+<h2 class="white subtitle"><b>2. Pins and Pin Connections</b></h2>
+
+<p class="white">Another component I worked on were the pins themselves, and connecting them both visually, and in the backend. </p>
+
+<img src="/images/bezierCurve.gif" alt="Demonstraion of the beizer curve" class="img-center">
+
+<p class="white">For the visual side, I would check if there was a “mousedown” event on any of the circle area of the output pins. Then, while still in the mousedown event, there is a mousemove event triggered, I would draw a Bezier curve between the point where the mousedown event happend, and the current location of the mouse. The result looks similar to the GIF above.  </p>
+
+<p class="white">After all of this, if there was a “mouseup” event on top of an input pin, the program would set the other end of the curve to the position of the input pin instead of the mouse curser. </p>
+
+<p class="white">If no mouse event was happening, each output pin would cycle through all of the input pins it was connected to and draw a curve between them aach frame. </p>
+
+<!-- Pin backend -->
+<p class="white subtitle"><b>Now, for the backend:</b></p>
+
+<p class="white">For the class organization, I decided to not have a shared parent class for the input pin and output pin classes. This is because at the time, I had thought their main functionalities varied widely.This was a bad decision, and looking back now, I would have created a parent pin class for them to make the program more undateable. </p>
+
+<p class="white">Of course, one of the first things I had to implement hit detection on all of the pins. Whenever there was a mousedown or mouseup event, it would call a hit detection function that would call a different hit detection function from each of the objects we created. If the mouse cursers coordinates where within radius of any of the pins, it would return true.  </p>
+
+<p class="white">Not only would the hit detection return true, it would call the connect functions in each of the pin classes.</p>
+
+<p class="white">For output pins, it would add the input pin object to a list of all the input pins that output pin was connected to.</p>
+
+<p class="white">For input pins, it would save only the output pin it was connected to.</p>
+
+<p class="white subtitle"><b>Sending the Info:</b></p>
+
+<p class="white">To send the status of the pins, I would have the output pins constantly sending its status to all of the input pins it was connected too. </p>
+
+<p class="white">To send the status of the pins, I would have the output pins constantly sending its status to all of the input pins it was connected too. </p>
+
+
 
 </body>
 </html>

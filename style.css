@@ -15,8 +15,12 @@ h1
 
 }
 
+.subtitle
+{
+    margin: 20px;
+}
 
-p
+p, h2
 {
     font-size: 25px;
     margin-left: 50px;
@@ -173,9 +177,13 @@ img
     clear: both;
 }
 
+.img-center
+{
+    display: block;
+    margin: auto;
 
+}
 
-/* Remember to change the width and aspect ratio when you get a real photo */
 .mugshot
 {
     margin: 50px;
@@ -184,6 +192,13 @@ img
     height: auto;
 
     float: left;
+}
+
+.AND-gate
+{
+    margin-top: 20px;
+    width: 10em;
+    height: auto;
 }
 
 /* -------------- */
