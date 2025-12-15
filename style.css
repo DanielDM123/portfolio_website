@@ -122,8 +122,10 @@ nav
 
     display: flex;
 
-    background-color: #000000;
-    opacity: 70%;
+    /* Use this instead of opacity to make the project button not transparent as well */
+    background-color: rgba(0, 0, 0, .75);
+    /* opacity: 70%; */
+
 }
 
 .nav-text
@@ -239,6 +241,11 @@ img
     display: block;
     width: 100%;
     height: auto;
+}
+
+.project-icons:hover
+{
+    opacity: .6;
 }
 
 .project-container
