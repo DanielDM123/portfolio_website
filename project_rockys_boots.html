@@ -66,7 +66,7 @@
 
 <!-- ---------------------------- -->
 <!-- SOFTWARE DEVELOPMENT SECTION -->
- <!-- ---------------------------- -->
+<!-- ---------------------------- -->
 <h1 class="white title">Software Development</h1>
 
 <p class="white">Here are some the of the components of the game I worked on, and how I went about creating them.</p>
@@ -80,11 +80,11 @@
 
 <img src="/images/ANDGate.png" alt="AND gate image" class="float-left AND-gate">
 
-<p class="white">Our actual pins look something like this AND gate, where there were 2 pins on the right of the gates that would act as the input, and one pin that would act as the output.</p>
+<p class="white">Our actual pins look something like this AND gate, where there were 2 pins on the left side of the gates would act as the input pins, and the one pin on the right would act as the output pin.</p>
 
 <p class="white clear-float">On each frame, the program would check that status of each of the input pins. It would then compute the logic of the gate depending on the state of the input pins. So, in this case with the AND gate shown above, if the top pin status was TRUE, and the bottom pin status was FLASE, then the output pin would be set to FLASE. </p>
 
-<p class="white">Later on in in development, we realized that we could just compute the logic of the gate every time the statues of one of the input pins changed, instead of checking every single frame. We decided to not go with this more efficient method, since code efficiency was not one of the main grading criteria of the project. Our program was small enough where lag was not noticeable, so it worked out in the end.</p>
+<p class="white">Later on in in development, we realized that we could just compute the logic of the gate every time the statues of one of the input pins changed, instead of checking every single frame. We decided to not go with this more efficient method, since code efficiency was not one of the main grading criteria of the project. Our program was also small enough where lag was not noticeable, so it worked out in the end.</p>
 
 <p class="white">For the class organization, I created a parent Gate class, from which all of the gate classes were derived from. Many of the gates shared common tasks, like all having input and output pins, and a ProcessLogic() function, so having a parent class helped to reduce repeating code. </p>
 
@@ -100,12 +100,12 @@
 
 <p class="white">After all of this, if there was a “mouseup” event on top of an input pin, the program would set the other end of the curve to the position of the input pin instead of the mouse curser. </p>
 
-<p class="white">If no mouse event was happening, each output pin would cycle through all of the input pins it was connected to and draw a curve between them aach frame. </p>
+<p class="white">If no mouse event was happening, each output pin would cycle through all of the input pins it was connected to and draw a curve between them each frame. </p>
 
 <!-- Pin backend -->
 <p class="white subtitle"><b>Now, for the backend:</b></p>
 
-<p class="white">For the class organization, I decided to not have a shared parent class for the input pin and output pin classes. This is because at the time, I had thought their main functionalities varied widely.This was a bad decision, and looking back now, I would have created a parent pin class for them to make the program more undateable. </p>
+<p class="white">For the class organization, I decided to not have a shared parent class for the input pin and output pin classes. This is because at the time, I had thought their main functionalities varied widely. This was a bad decision, and I should have created a parent pin class for them to make the program more undateable. </p>
 
 <p class="white">Of course, one of the first things I had to implement hit detection on all of the pins. Whenever there was a mousedown or mouseup event, it would call a hit detection function that would call a different hit detection function from each of the objects we created. If the mouse cursers coordinates where within radius of any of the pins, it would return true.  </p>
 
@@ -119,7 +119,6 @@
 
 <p class="white">To send the status of the pins, I would have the output pins constantly sending its status to all of the input pins it was connected too. </p>
 
-<p class="white">To send the status of the pins, I would have the output pins constantly sending its status to all of the input pins it was connected too. </p>
 
 
 
